@@ -1,0 +1,1 @@
+export const cbId = () => Math.random().toString(16).slice(2);
