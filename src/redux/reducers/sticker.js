@@ -1,12 +1,12 @@
-export default (state = {}, action) => {
-    switch (action.type) {
+export default (state = {}, {id, type, text}) => {
+    switch (type) {
         case 'ADD_STICKER':
             return {
-                result: [...state, {}]
+                result: [...state, {id, text}]
             };
         case 'REMOVE_STICKER':
             return {
-                result: action.payload
+                result: state.filter(item => item.id !== id)
             };
         default:
             return state

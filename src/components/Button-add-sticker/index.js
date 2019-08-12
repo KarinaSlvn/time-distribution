@@ -1,6 +1,6 @@
 import React from 'react';
 import './styles.less'
-import { withStyles } from '@material-ui/core/styles';
+import {withStyles} from '@material-ui/core/styles';
 import Fab from '@material-ui/core/Fab';
 import AddIcon from '@material-ui/icons/Add';
 
@@ -17,14 +17,13 @@ const AddButton = withStyles({
 })(Fab);
 
 
-class ButtonAdd extends React.Component {
-    constructor(props) {
-        super(props);
+class  ButtonAdd extends React.Component {
+    constructor(props){
+        super(props)
     }
-
-    render() {
+    render(){
         return (
-            <AddButton color="primary" aria-label="add">
+            <AddButton color="primary" aria-label="add" onClick={this.props.openModal}>
                 <AddIcon/>
             </AddButton>
         );
